@@ -1,40 +1,15 @@
-import {Client} from './Client.js'
+import { Account } from "./Account.js"
 
-export class CurrentAccount {
+export class CurrentAccount extends Account {
   constructor (client, accountNumber) {
-    if (!client instanceof Client || !accountNumber)
-      return
-    
-    this._accountNumber = accountNumber
-    this._client = client
-    this._balanceValue = 0
-  }
-  
-  get balanceValue() {
-    return this._balanceValue
+    super(client, accountNumber)
   }
 
-  get client() {
-    return this._client
-  }
-
-  get accountNumber() {
-    return this.accountNumber
-  }
-
-  debit(value) {
+  withdraw(value) {
     if (value > this._balanceValue)
       return
     
     this._balanceValue -= value
-    return balanceValue
-  }
-
-  credit(value) {
-    if (value < 1)
-      return
-
-    this._balanceValue += value
-    return this.balanceValue
+    return value * 1.02
   }
 }
