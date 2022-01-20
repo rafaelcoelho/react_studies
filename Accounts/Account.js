@@ -1,4 +1,4 @@
-import {Client} from './Client.js'
+import {Client} from '../Customers/Client.js'
 
 export class Account {
   #accountNumber

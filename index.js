@@ -1,6 +1,7 @@
-import {Client} from './Client.js'
-import { CurrentAccount } from './CurrentAccount.js'
-import { SavingAccount } from './SavingAccount.js'
+import {Client} from './Customers/Client.js'
+import { CurrentAccount } from './Accounts/CurrentAccount.js'
+import { SavingAccount } from './Accounts/SavingAccount.js'
+import { Account } from './Accounts/Account.js'
 
 let account1 = new CurrentAccount(new Client("Steve", 12332154367), 123)
 let account2 = new SavingAccount(new Client("Albert", 59889009867), 124)
