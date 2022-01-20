@@ -5,6 +5,9 @@ export class Account {
   #client
 
   constructor (client, accountNumber) {
+    if (this.constructor == Account)
+      throw new Error('The Account class is abstract and instances is not allowed')
+
     if (!client instanceof Client || !accountNumber)
       return
     
