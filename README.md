@@ -1,4 +1,4 @@
-# react_studies
+# React Studies in JavaScript
 A POC in order to try out come JS react native
 
 
