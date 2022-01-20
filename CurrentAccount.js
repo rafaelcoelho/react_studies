@@ -1,10 +1,6 @@
 import {Client} from './Client.js'
 
 export class CurrentAccount {
-  _client
-  _accountNumber
-  _balanceValue
-
   constructor (client, accountNumber) {
     if (!client instanceof Client || !accountNumber)
       return
