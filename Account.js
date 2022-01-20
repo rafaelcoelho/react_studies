@@ -1,12 +1,15 @@
 import {Client} from './Client.js'
 
 export class Account {
+  #accountNumber
+  #client
+
   constructor (client, accountNumber) {
     if (!client instanceof Client || !accountNumber)
       return
     
-    this._accountNumber = accountNumber
-    this._client = client
+    this.#accountNumber = accountNumber
+    this.#client = client
     this._balanceValue = 0
   }
 
@@ -31,7 +34,7 @@ export class Account {
   }
 
   get client() {
-    return this._client
+    return this.#client
   }
 
   get accountNumber() {
