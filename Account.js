@@ -37,4 +37,12 @@ export class Account {
   get accountNumber() {
     return this.accountNumber
   }
+
+  withdraw(value) {
+    if (value > this._balanceValue)
+      return
+    
+    this._balanceValue -= value
+    return value
+  }
 }
