@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CardNota from "../cardGrade/GradeCard";
-import "./style.css"
+import "./style.css";
 
 class GradeList extends Component {
   render() {
@@ -9,7 +9,7 @@ class GradeList extends Component {
         {this.props.grades.map((grade, index) => {
           return (
             <li className="grade-list_item" key={index}>
-              <CardNota subject={grade.subject} text={grade.text}/>
+              <CardNota subject={grade.subject} text={grade.text} />
             </li>
           );
         })}
@@ -18,4 +18,4 @@ class GradeList extends Component {
   }
 }
 
-export default GradeList
+export default GradeList;

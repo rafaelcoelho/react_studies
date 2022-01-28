@@ -2,34 +2,33 @@ import React, { Component } from "react";
 import "./style.css";
 
 class RegisterForm extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.subject = "";
     this.text = "";
   }
 
-  _handleSubjectUpdate(event){
+  _handleSubjectUpdate(event) {
     event.stopPropagation();
     this.subject = event.target.value;
   }
 
-  _handleTextUpdate(event){
+  _handleTextUpdate(event) {
     event.stopPropagation();
     this.text = event.target.value;
   }
 
-  _createGrade(event){
+  _createGrade(event) {
     event.preventDefault();
     event.stopPropagation();
+
+    //Invoke the dependency one
     this.props.createGrade(this.subject, this.text);
-    
   }
 
   render() {
     return (
-      <form className="form-register"
-        onSubmit={this._createGrade.bind(this)}
-      >
+      <form className="form-register" onSubmit={this._createGrade.bind(this)}>
         <input
           type="text"
           placeholder="Subject"
