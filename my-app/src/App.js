@@ -8,6 +8,7 @@ class App extends Component {
   constructor() {
     super();
 
+    //A special attribute used to update the visualization
     this.state = {
       grades: []
     }
@@ -26,6 +27,7 @@ class App extends Component {
     return (
       <section className="content">
 
+        //DI using properties from JSX
         <RegisterForm createGrade={this.newGrade.bind(this)} />
 
         <GradeList grades={this.state.grades} />
